@@ -17,6 +17,7 @@ It integrates:
 
 ---
 ## 🧱 Architecture Diagram
+## 🧱 Architecture Diagram
 
 ```mermaid
 flowchart TD
@@ -27,7 +28,7 @@ B --> C[FastAPI Backend]
 C --> D[Inngest Event Handler]
 
 D --> E[Data Loader]
-E --> F[Chunking]
+E --> F[Text Chunking]
 
 F --> G[Embedding Model]
 
@@ -38,15 +39,17 @@ I --> J[Query Embedding]
 
 J --> H
 
-H --> K[Retrieve Relevant Chunks]
+H --> K[Relevant Chunks]
 
 K --> L[Reranker]
 
-L --> M[LLM (Answer Generation)]
+L --> M[LLM Answer Generation]
 
 M --> N[Final Response]
 
 N --> B
+```
+
 ```
 
 
